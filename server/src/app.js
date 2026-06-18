@@ -47,6 +47,11 @@ app.use("/api/v1/members", memberRoutes);
 app.use("/api/v1/notifications", notificationRoutes);
 app.use("/api/v1/tasks", taskRoutes);
 app.use("/api/v1/activities", activityRoutes);
+
+app.get("/", (req, res) => {
+  res.send("Backend is alive ");
+});
+
 app.get("/api/v1", (req, res) => {
   res.json({
     message: "API running successfully",
